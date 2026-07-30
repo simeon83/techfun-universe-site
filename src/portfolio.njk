@@ -1,0 +1,60 @@
+---
+layout: base.njk
+title: "Portfolio"
+description: "Explore TechFun Universe's portfolio of websites, mobile apps, custom software, branding, and AI projects for clients in Liberia and West Africa."
+---
+<style>
+.filter-bar { display:flex; gap:0.6rem; flex-wrap:wrap; justify-content:center; margin-bottom: var(--space-5); }
+.filter-btn { font-family: var(--font-mono); font-size:0.82rem; padding:0.5rem 1.1rem; border-radius: var(--radius-full); border:1px solid var(--border); background:var(--white); color:var(--slate); cursor:pointer; transition: all 0.2s ease; }
+.filter-btn.is-active, .filter-btn:hover { background:var(--navy); border-color:var(--navy); color:var(--white); }
+</style>
+
+<section class="hero" style="padding-bottom: var(--space-5);">
+  <svg class="hero-arc" viewBox="0 0 400 400" fill="none">
+    <path d="M120 20 C 260 40, 380 140, 360 260 C 345 350, 250 380, 170 360" stroke="#FF7A00" stroke-width="3" stroke-linecap="round" opacity="0.85"/>
+    <circle cx="170" cy="360" r="7" fill="#FF7A00"/>
+  </svg>
+  <div class="container hero-inner">
+    <span class="eyebrow">Our Work</span>
+    <h1 style="color:#fff;">Projects across websites, apps, software, and AI</h1>
+    <p class="lead">A sample of what we've built for clients across Liberia and West Africa.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="filter-bar">
+      <button class="filter-btn is-active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="website">Websites</button>
+      <button class="filter-btn" data-filter="app">Mobile Apps</button>
+      <button class="filter-btn" data-filter="software">Software</button>
+      <button class="filter-btn" data-filter="branding">Branding</button>
+      <button class="filter-btn" data-filter="ai">AI Projects</button>
+    </div>
+
+    <div class="grid grid-3">
+      {% for item in collections.portfolioItems | reverse %}
+      <div class="card" data-category="{{ item.data.category }}">
+        <span class="badge">{{ item.data.category | capitalize }}</span>
+        <h3>{{ item.data.title }}</h3>
+        <p>{{ item.data.description }}</p>
+        {% if item.data.technologies %}<p style="font-size:0.82rem; color:var(--slate-light);">{{ item.data.technologies }}</p>{% endif %}
+        {% if item.data.results %}<p style="font-size:0.82rem; color:var(--orange);">{{ item.data.results }}</p>{% endif %}
+        <a href="/contact/" class="card-link">See similar results →</a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="cta-band">
+      <h2>Want results like these?</h2>
+      <p>Tell us about your project and we'll show you exactly how we'd approach it.</p>
+      <div class="cta-actions">
+        <a href="/contact/" class="btn btn-primary">Start Your Project</a>
+      </div>
+    </div>
+  </div>
+</section>

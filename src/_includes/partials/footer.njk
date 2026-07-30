@@ -1,0 +1,41 @@
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>TechFun Universe</h4>
+        <p style="color:rgba(255,255,255,0.6); font-size:0.9rem; max-width:280px;">Digital agency and technology solutions company based in Monrovia, Liberia, serving clients across West Africa and beyond.</p>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/portfolio/">Portfolio</a></li>
+          <li><a href="/careers/">Careers</a></li>
+          <li><a href="/blog/">Blog</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="/services/">Websites</a></li>
+          <li><a href="/mobile-apps/">Mobile Apps</a></li>
+          <li><a href="/software/">Software</a></li>
+          <li><a href="/pricing/">Pricing</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:{{ contact.phone_1 | replace(' ', '') }}">{{ contact.phone_1 }}</a></li>
+          <li><a href="tel:{{ contact.phone_2 | replace(' ', '') }}">{{ contact.phone_2 }}</a></li>
+          <li><a href="https://wa.me/{{ contact.whatsapp | replace(' ', '') | replace('+', '') }}">WhatsApp Us</a></li>
+          <li>{{ contact.address }}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© {{ currentYear }} TechFun Universe Digital Agency. All rights reserved.</span>
+      <span><a href="/client-portal/">Client Portal</a></span>
+    </div>
+  </div>
+</footer>

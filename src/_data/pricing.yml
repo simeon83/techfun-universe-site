@@ -1,0 +1,32 @@
+website_packages:
+  - name: "Starter"
+    tagline: "Landing pages & simple sites"
+    price: "$350"
+    featured: false
+    features:
+      - "Up to 5 pages"
+      - "Mobile responsive"
+      - "Basic SEO setup"
+      - "Contact form"
+      - "2 rounds of revisions"
+  - name: "Business"
+    tagline: "Full corporate or organization site"
+    price: "$800"
+    featured: true
+    features:
+      - "Up to 12 pages"
+      - "Blog + Decap CMS admin"
+      - "SEO & Open Graph setup"
+      - "Newsletter signup"
+      - "3 rounds of revisions"
+      - "1 year hosting support"
+  - name: "E-commerce"
+    tagline: "Online store with payments"
+    price: "$1,500"
+    featured: false
+    features:
+      - "Unlimited products"
+      - "Payment gateway integration"
+      - "Inventory management"
+      - "Order notifications"
+      - "1 year hosting support"
