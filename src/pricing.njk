@@ -26,13 +26,13 @@ description: "Transparent pricing for websites, e-commerce, mobile apps, custom 
 
 <section class="section">
   <div class="container">
-    <div class="section-head center">
+    <div class="section-head center reveal">
       <span class="eyebrow">Websites</span>
       <h2>Website Packages</h2>
     </div>
-    <div class="grid grid-3">
+    <div class="grid grid-3 reveal-group">
       {% for pkg in pricing.website_packages %}
-      <div class="price-card {% if pkg.featured %}featured{% endif %}">
+      <div class="price-card reveal-item {% if pkg.featured %}featured{% endif %}">
         {% if pkg.featured %}<span class="badge">Most Popular</span>{% endif %}
         <h3>{{ pkg.name }}</h3>
         <p style="font-size:0.88rem;">{{ pkg.tagline }}</p>
@@ -49,22 +49,22 @@ description: "Transparent pricing for websites, e-commerce, mobile apps, custom 
 
 <section class="section section-alt">
   <div class="container">
-    <div class="section-head center">
+    <div class="section-head center reveal">
       <span class="eyebrow">Beyond Websites</span>
       <h2>Mobile Apps, Software &amp; AI</h2>
       <p>Every mobile app, custom software system, and AI solution is scoped individually based on complexity, integrations, and timeline.</p>
     </div>
-    <div class="grid grid-3">
-      <div class="card"><h3>Mobile Apps</h3><p>Starting from $2,000 depending on platform and features.</p><a href="/contact/" class="card-link">Get a Free Quote →</a></div>
-      <div class="card"><h3>Custom Software</h3><p>Starting from $2,500, or from $600/month for our flagship products.</p><a href="/contact/" class="card-link">Get a Free Quote →</a></div>
-      <div class="card"><h3>AI Solutions</h3><p>Starting from $500 for a business chatbot, scaling with complexity.</p><a href="/contact/" class="card-link">Get a Free Quote →</a></div>
+    <div class="grid grid-3 reveal-group">
+      <div class="card reveal-item"><h3>Mobile Apps</h3><p>Starting from $2,000 depending on platform and features.</p><a href="/contact/" class="card-link">Get a Free Quote →</a></div>
+      <div class="card reveal-item"><h3>Custom Software</h3><p>Starting from $2,500, or from $600/month for our flagship products.</p><a href="/contact/" class="card-link">Get a Free Quote →</a></div>
+      <div class="card reveal-item"><h3>AI Solutions</h3><p>Starting from $500 for a business chatbot, scaling with complexity.</p><a href="/contact/" class="card-link">Get a Free Quote →</a></div>
     </div>
   </div>
 </section>
 
 <section class="section">
   <div class="container">
-    <div class="cta-band">
+    <div class="cta-band reveal">
       <h2>Need something custom?</h2>
       <p>Tell us your budget and goals — we'll put together a scope that fits both.</p>
       <div class="cta-actions">

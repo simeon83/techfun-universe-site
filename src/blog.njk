@@ -17,9 +17,9 @@ description: "Insights on web development, mobile apps, custom software, AI, and
 
 <section class="section">
   <div class="container">
-    <div class="grid grid-3">
+    <div class="grid grid-3 reveal-group">
       {% for post in collections.blogPosts %}
-      <a href="{{ post.url }}" class="card" style="text-decoration:none;">
+      <a href="{{ post.url }}" class="card reveal-item" style="text-decoration:none;">
         <span class="badge">{{ post.data.category }}</span>
         <h3>{{ post.data.title }}</h3>
         <p>{{ post.data.excerpt }}</p>

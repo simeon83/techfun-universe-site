@@ -23,7 +23,7 @@ description: "Explore TechFun Universe's portfolio of websites, mobile apps, cus
 
 <section class="section">
   <div class="container">
-    <div class="filter-bar">
+    <div class="filter-bar reveal">
       <button class="filter-btn is-active" data-filter="all">All</button>
       <button class="filter-btn" data-filter="website">Websites</button>
       <button class="filter-btn" data-filter="app">Mobile Apps</button>
@@ -32,9 +32,9 @@ description: "Explore TechFun Universe's portfolio of websites, mobile apps, cus
       <button class="filter-btn" data-filter="ai">AI Projects</button>
     </div>
 
-    <div class="grid grid-3">
+    <div class="grid grid-3 reveal-group">
       {% for item in collections.portfolioItems | reverse %}
-      <div class="card" data-category="{{ item.data.category }}">
+      <div class="card reveal-item" data-category="{{ item.data.category }}">
         <span class="badge">{{ item.data.category | capitalize }}</span>
         <h3>{{ item.data.title }}</h3>
         <p>{{ item.data.description }}</p>
@@ -49,7 +49,7 @@ description: "Explore TechFun Universe's portfolio of websites, mobile apps, cus
 
 <section class="section section-alt">
   <div class="container">
-    <div class="cta-band">
+    <div class="cta-band reveal">
       <h2>Want results like these?</h2>
       <p>Tell us about your project and we'll show you exactly how we'd approach it.</p>
       <div class="cta-actions">
