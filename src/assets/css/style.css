@@ -425,3 +425,155 @@ img { max-width: 100%; display: block; }
 .stat-num { transition: transform 0.3s ease; }
 .reveal.is-visible .stat-num { animation: pop 0.5s ease 0.3s; }
 @keyframes pop { 0% { transform: scale(0.9); } 60% { transform: scale(1.05); } 100% { transform: scale(1); } }
+
+/* ===========================================================
+   Premium Footer
+   =========================================================== */
+.premium-footer {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse 70% 60% at 15% 10%, rgba(63,111,209,0.14), transparent 60%),
+    radial-gradient(ellipse 60% 50% at 85% 90%, rgba(255,122,0,0.10), transparent 60%),
+    var(--navy-darker);
+  background-size: 200% 200%;
+  animation: footer-gradient 18s ease-in-out infinite;
+}
+@keyframes footer-gradient {
+  0%, 100% { background-position: 0% 0%, 100% 100%, 0 0; }
+  50% { background-position: 20% 30%, 70% 60%, 0 0; }
+}
+@media (prefers-reduced-motion: reduce) { .premium-footer { animation: none; } }
+
+.footer-particles { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+.footer-particles::before, .footer-particles::after {
+  content: ""; position: absolute; border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,148,51,0.35), transparent 70%);
+  filter: blur(1px);
+}
+.footer-particles::before { width: 6px; height: 6px; top: 15%; left: 12%; animation: particle-float 9s ease-in-out infinite; }
+.footer-particles::after { width: 4px; height: 4px; top: 70%; left: 82%; animation: particle-float 12s ease-in-out infinite reverse; }
+@keyframes particle-float {
+  0%, 100% { transform: translateY(0) translateX(0); opacity: 0.5; }
+  50% { transform: translateY(-40px) translateX(20px); opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) { .footer-particles::before, .footer-particles::after { animation: none; } }
+
+.footer-grid-4 { grid-template-columns: 1.6fr 1fr 1fr 1fr; }
+@media (max-width: 900px) { .footer-grid-4 { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .footer-grid-4 { grid-template-columns: 1fr; } }
+
+.footer-brand-name { font-family: var(--font-display); font-size: 1.1rem; }
+.footer-tagline { color: var(--orange-light); font-size: 0.85rem; font-weight: 600; margin-bottom: 0.8rem; }
+
+.footer-social { display: flex; gap: 0.6rem; margin-top: var(--space-3); flex-wrap: wrap; }
+.social-icon {
+  width: 38px; height: 38px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.75);
+  transition: all 0.3s cubic-bezier(0.22,1,0.36,1);
+}
+.social-icon:hover {
+  background: linear-gradient(135deg, var(--navy), var(--orange));
+  color: #fff;
+  transform: translateY(-4px) scale(1.08);
+  box-shadow: 0 10px 24px rgba(255,122,0,0.3);
+  border-color: transparent;
+}
+
+.newsletter-card {
+  position: relative;
+  z-index: 2;
+  margin-top: var(--space-5);
+  padding: var(--space-4);
+  border-radius: var(--radius-l);
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.12);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+.newsletter-form { display: flex; gap: 0.6rem; flex-wrap: wrap; }
+.newsletter-form input[type="email"] {
+  padding: 0.75rem 1.1rem; border-radius: var(--radius-full);
+  border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.08);
+  color: #fff; min-width: 240px; font-family: var(--font-body);
+}
+.newsletter-form input[type="email"]::placeholder { color: rgba(255,255,255,0.45); }
+.newsletter-form input[type="email"]:focus { outline: 2px solid var(--orange); }
+.newsletter-success {
+  display: flex; align-items: center; gap: 0.5rem; color: var(--orange-light);
+  font-weight: 600; font-size: 0.92rem; opacity: 0; transform: translateY(6px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.newsletter-success.show { opacity: 1; transform: translateY(0); }
+
+.footer-bottom { flex-wrap: wrap; gap: 0.8rem 1.5rem; }
+.footer-legal-links { display: flex; gap: 1.2rem; flex-wrap: wrap; }
+.footer-legal-links a { font-size: 0.82rem; }
+.footer-credit { font-size: 0.8rem; color: rgba(255,255,255,0.45); }
+
+/* ===========================================================
+   Floating WhatsApp Widget
+   =========================================================== */
+.wa-float {
+  position: fixed;
+  bottom: 26px;
+  right: 26px;
+  z-index: 500;
+  width: 62px; height: 62px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--orange) 100%);
+  color: #fff;
+  box-shadow: 0 10px 30px rgba(255,122,0,0.35), 0 4px 14px rgba(11,61,145,0.3);
+  backdrop-filter: blur(6px);
+  animation: wa-bounce 4.5s ease-in-out infinite;
+  text-decoration: none;
+}
+.wa-float:hover { box-shadow: 0 14px 40px rgba(255,122,0,0.5), 0 6px 18px rgba(11,61,145,0.4); }
+@keyframes wa-bounce {
+  0%, 85%, 100% { transform: translateY(0); }
+  90% { transform: translateY(-10px); }
+  95% { transform: translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) { .wa-float { animation: none; } }
+
+.wa-ripple {
+  position: absolute; inset: 0; border-radius: 50%;
+  border: 2px solid rgba(255,122,0,0.5);
+  opacity: 0; transform: scale(1);
+}
+.wa-float:hover .wa-ripple { animation: wa-ripple 1s ease-out; }
+@keyframes wa-ripple {
+  0% { opacity: 0.8; transform: scale(1); }
+  100% { opacity: 0; transform: scale(1.6); }
+}
+
+.wa-tooltip {
+  position: absolute; right: 74px; top: 50%; transform: translateY(-50%);
+  background: var(--navy-deep); color: #fff; font-size: 0.82rem; font-weight: 600;
+  padding: 0.5rem 0.9rem; border-radius: var(--radius-s); white-space: nowrap;
+  opacity: 0; pointer-events: none; transition: opacity 0.25s ease, right 0.25s ease;
+  box-shadow: var(--shadow-md);
+}
+.wa-float:hover .wa-tooltip { opacity: 1; right: 78px; }
+
+.wa-status {
+  position: absolute; bottom: 72px; right: 0; white-space: nowrap;
+  background: rgba(5,15,38,0.92); color: #d7e9d0; font-size: 0.72rem; font-family: var(--font-mono);
+  padding: 0.35rem 0.7rem; border-radius: var(--radius-full);
+  opacity: 0; transform: translateY(6px); transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+}
+.wa-float:hover .wa-status { opacity: 1; transform: translateY(0); }
+
+@media (max-width: 600px) {
+  .wa-float { width: 54px; height: 54px; bottom: 18px; right: 18px; }
+  .wa-tooltip, .wa-status { display: none; }
+}

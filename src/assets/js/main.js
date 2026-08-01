@@ -73,6 +73,46 @@ document.addEventListener('DOMContentLoaded', () => {
     revealTargets.forEach(el => revealObserver.observe(el));
   }
 
+  // Newsletter subscribe (Netlify Forms via fetch, with inline success animation)
+  const newsletterForm = document.getElementById('newsletterForm');
+  if (newsletterForm) {
+    newsletterForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const formData = new FormData(newsletterForm);
+      const submitBtn = newsletterForm.querySelector('button[type="submit"]');
+      const originalLabel = submitBtn.textContent;
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Subscribing...';
+
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData).toString(),
+      })
+        .then(() => {
+          newsletterForm.reset();
+          let successEl = newsletterForm.parentElement.querySelector('.newsletter-success');
+          if (!successEl) {
+            successEl = document.createElement('div');
+            successEl.className = 'newsletter-success';
+            successEl.innerHTML = '✓ Subscribed! Welcome aboard.';
+            newsletterForm.after(successEl);
+          }
+          requestAnimationFrame(() => successEl.classList.add('show'));
+          setTimeout(() => successEl.classList.remove('show'), 4000);
+        })
+        .catch(() => {
+          submitBtn.textContent = 'Try again';
+        })
+        .finally(() => {
+          setTimeout(() => {
+            submitBtn.disabled = false;
+            submitBtn.textContent = originalLabel;
+          }, 1200);
+        });
+    });
+  }
+
   // FAQ accordion
   document.querySelectorAll('.faq-item').forEach(item => {
     const q = item.querySelector('.faq-question');
