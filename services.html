@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services | TechFun Universe</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-mark">TFU</span>Tech<span>Fun</span></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html" class="active">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="blog.html">Blog</a>
+      <a href="careers.html">Careers</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="nav-right">
+      <a href="login.html" style="color:var(--text-dim);font-size:0.92rem;">Login</a>
+      <a href="contact.html" class="btn btn-primary btn-sm">Start Project ↗</a>
+      <button class="nav-toggle" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</nav>
+
+<header class="section">
+  <div class="section-glow"></div>
+  <div class="container">
+    <div class="eyebrow">// Services</div>
+    <h1 style="font-size:clamp(2rem,4vw,2.8rem);margin-bottom:14px;">Service <span style="color:var(--orange)">Blueprints</span></h1>
+    <p style="color:var(--text-dim);max-width:560px;font-size:1.02rem;">Six core capabilities, engineered to transform your business. Select the services you need and build a custom inquiry.</p>
+  </div>
+</header>
+
+<section class="section tight">
+  <div class="container">
+    <div class="services-layout">
+      <div id="servicesList">
+        <div class="service-row" data-service="Website Development">
+          <div class="card-icon">&lt;/&gt;</div>
+          <div>
+            <div class="num">01</div>
+            <h3>Website Development</h3>
+            <p>From business websites to complex e-commerce platforms, we build fast, responsive, and SEO-optimized web experiences.</p>
+            <ul class="sub-lists">
+              <li>Business Websites</li><li>E-commerce Websites</li>
+              <li>WordPress Websites</li><li>Custom Web Applications</li>
+            </ul>
+          </div>
+          <button class="add-btn">+</button>
+        </div>
+
+        <div class="service-row" data-service="Mobile App Development">
+          <div class="card-icon">📱</div>
+          <div>
+            <div class="num">02</div>
+            <h3>Mobile App Development</h3>
+            <p>Native and cross-platform apps for delivery, booking, healthcare, school, and business use cases.</p>
+            <ul class="sub-lists">
+              <li>Android Apps</li><li>iOS Apps</li>
+              <li>Cross-platform</li><li>Push Notifications</li>
+            </ul>
+          </div>
+          <button class="add-btn">+</button>
+        </div>
+
+        <div class="service-row" data-service="Custom Software Development">
+          <div class="card-icon">🖥️</div>
+          <div>
+            <div class="num">03</div>
+            <h3>Custom Software Development</h3>
+            <p>Business management, payroll, inventory, school and hospital systems, CRM, ERP, and multi-tenant SaaS platforms.</p>
+            <ul class="sub-lists">
+              <li>Management Systems</li><li>School Systems</li>
+              <li>Construction Platforms</li><li>Custom SaaS</li>
+            </ul>
+          </div>
+          <button class="add-btn">+</button>
+        </div>
+
+        <div class="service-row" data-service="AI Solutions">
+          <div class="card-icon">🤖</div>
+          <div>
+            <div class="num">04</div>
+            <h3>AI Solutions</h3>
+            <p>AI business assistants, chatbots, workflow automation, and intelligent search built into tools your team already uses.</p>
+            <ul class="sub-lists">
+              <li>AI Automation</li><li>AI Assistants</li>
+              <li>Business Productivity</li><li>Smart Analytics</li>
+            </ul>
+          </div>
+          <button class="add-btn">+</button>
+        </div>
+
+        <div class="service-row" data-service="Digital Marketing">
+          <div class="card-icon">📈</div>
+          <div>
+            <div class="num">05</div>
+            <h3>Digital Marketing</h3>
+            <p>SEO, social media management, Google Business optimization, and email marketing that brings the right people to you.</p>
+            <ul class="sub-lists">
+              <li>Social Media Marketing</li><li>SEO Optimization</li>
+              <li>Content Creation</li><li>Online Booking</li>
+            </ul>
+          </div>
+          <button class="add-btn">+</button>
+        </div>
+
+        <div class="service-row" data-service="Branding &amp; Graphics">
+          <div class="card-icon">🎨</div>
+          <div>
+            <div class="num">06</div>
+            <h3>Branding &amp; Graphics</h3>
+            <p>Logos, company profiles, brochures, and full brand identity systems that make you look as sharp as you are.</p>
+            <ul class="sub-lists">
+              <li>Modern Interfaces</li><li>User Experience Design</li>
+              <li>Branding Systems</li><li>Image Systems</li>
+            </ul>
+          </div>
+          <button class="add-btn">+</button>
+        </div>
+      </div>
+
+      <div class="selection-panel">
+        <div class="eyebrow" style="margin-bottom:6px;">// Inquiry Builder</div>
+        <h3>Your Selection</h3>
+        <p class="empty" id="selectionEmpty">Click the + icon on any service to add it to your inquiry.</p>
+        <ul id="selectedList"></ul>
+        <button class="btn btn-primary btn-block" id="sendInquiry">Send Inquiry ↗</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-launch">
+  <div class="container">
+    <div class="eyebrow">Ready to Launch?</div>
+    <h2>READY TO<br>LAUNCH?</h2>
+    <a href="contact.html" class="btn btn-primary">Start Your Project ↗</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <a href="index.html" class="logo"><span class="logo-mark">TFU</span>Tech<span>Fun</span></a>
+        <p>Digital Agency &amp; Technology Solutions. Serving African businesses and entrepreneurs with world-class digital experiences.</p>
+      </div>
+      <div>
+        <h4>Sitemap</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="login.html">Client Portal</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul class="footer-contact">
+          <li>✉ matthewsweeks666@gmail.com</li>
+          <li>📞 +231 880 880 376 / 775 478 253</li>
+          <li>📍 Chocolate City, New Junction, Gardnersville Township, Monrovia, Liberia</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Follow Us</h4>
+        <div class="social-row">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Twitter">𝕏</a>
+          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="Instagram">◎</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 TechFun Universe. All rights reserved.</span>
+      <span>Transforming Ideas into Digital Experience</span>
+    </div>
+  </div>
+</footer>
+
+<a class="whatsapp-fab btn btn-primary btn-sm" href="https://wa.me/231880880376?text=Hello%20TechFun%20Universe%2C%20I'm%20interested%20in%20your%20digital%20services." target="_blank" rel="noopener">WhatsApp</a>
+<button class="chat-launcher" id="chatLauncher" aria-label="Open chat">💬</button>
+<div class="chat-window" id="chatWindow">
+  <div class="chat-head">
+    <div class="who"><div class="avatar">TFU</div><div><strong>TechFun AI Assistant</strong><span class="status">● Online</span></div></div>
+    <button id="chatClose" aria-label="Close chat">✕</button>
+  </div>
+  <div class="chat-body" id="chatBody">
+    <div class="chat-msg">👋 Hi! I'm the TechFun Universe AI assistant. What would you like to know?</div>
+  </div>
+  <div class="chat-suggested">
+    <span>✨ Suggested questions</span>
+    <button>What services do you offer?</button>
+    <button>How much does a website cost?</button>
+    <button>Do you build school management systems?</button>
+  </div>
+  <div class="chat-input-row">
+    <input type="text" id="chatInput" placeholder="Ask me anything...">
+    <button id="chatSend" aria-label="Send">➤</button>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
