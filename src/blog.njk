@@ -1,0 +1,31 @@
+---
+layout: base.njk
+title: "Blog"
+description: "Insights on web development, mobile apps, custom software, AI, and digital marketing from the TechFun Universe team."
+---
+<section class="hero" style="padding-bottom: var(--space-5);">
+  <svg class="hero-arc" viewBox="0 0 400 400" fill="none">
+    <path d="M120 20 C 260 40, 380 140, 360 260 C 345 350, 250 380, 170 360" stroke="#FF7A00" stroke-width="3" stroke-linecap="round" opacity="0.85"/>
+    <circle cx="170" cy="360" r="7" fill="#FF7A00"/>
+  </svg>
+  <div class="container hero-inner">
+    <span class="eyebrow">Blog</span>
+    <h1 style="color:#fff;">Ideas on technology, growth, and digital strategy</h1>
+    <p class="lead">Notes from our team on building better websites, apps, and software for organizations in Liberia and beyond.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="grid grid-3 reveal-group">
+      {% for post in collections.blogPosts %}
+      <a href="{{ post.url }}" class="card reveal-item" style="text-decoration:none;">
+        <span class="badge">{{ post.data.category }}</span>
+        <h3>{{ post.data.title }}</h3>
+        <p>{{ post.data.excerpt }}</p>
+        <p style="font-size:0.8rem; color:var(--slate-light);">{{ post.data.date | readableDate }} · {{ post.data.read_time }}</p>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>

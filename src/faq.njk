@@ -1,0 +1,48 @@
+---
+layout: base.njk
+title: "FAQ"
+description: "Answers to common questions about working with TechFun Universe on websites, mobile apps, custom software, and pricing."
+---
+<style>
+.faq-item { border-bottom: 1px solid var(--border); padding: var(--space-3) 0; }
+.faq-question { display:flex; justify-content:space-between; align-items:center; cursor:pointer; font-family: var(--font-display); font-weight:600; font-size:1.05rem; color: var(--navy-deep); }
+.faq-question::after { content: "+"; font-size:1.4rem; color: var(--orange); transition: transform 0.25s ease; }
+.faq-item.open .faq-question::after { transform: rotate(45deg); }
+.faq-answer { max-height:0; overflow:hidden; transition: max-height 0.3s ease; }
+.faq-item.open .faq-answer { max-height: 300px; margin-top: var(--space-2); }
+</style>
+
+<section class="hero" style="padding-bottom: var(--space-5);">
+  <svg class="hero-arc" viewBox="0 0 400 400" fill="none">
+    <path d="M120 20 C 260 40, 380 140, 360 260 C 345 350, 250 380, 170 360" stroke="#FF7A00" stroke-width="3" stroke-linecap="round" opacity="0.85"/>
+    <circle cx="170" cy="360" r="7" fill="#FF7A00"/>
+  </svg>
+  <div class="container hero-inner">
+    <span class="eyebrow">FAQ</span>
+    <h1 style="color:#fff;">Common questions, answered</h1>
+    <p class="lead">Can't find what you're looking for? Just reach out.</p>
+  </div>
+</section>
+
+<section class="section" style="max-width: 760px; margin: 0 auto;">
+  <div class="container">
+    {% for item in collections.faqItems %}
+    <div class="faq-item {% if loop.first %}open{% endif %}">
+      <div class="faq-question">{{ item.data.question }}</div>
+      <div class="faq-answer"><p>{{ item.data.answer }}</p></div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="cta-band reveal">
+      <h2>Still have questions?</h2>
+      <p>Reach out directly and we'll walk you through it.</p>
+      <div class="cta-actions">
+        <a href="/contact/" class="btn btn-primary">Contact Us</a>
+      </div>
+    </div>
+  </div>
+</section>

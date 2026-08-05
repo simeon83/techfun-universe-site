@@ -1,0 +1,22 @@
+---
+layout: base.njk
+---
+<section class="section" style="padding-top: var(--space-6);">
+  <div class="container" style="max-width: 760px;">
+    <span class="badge">{{ category }}</span>
+    <h1>{{ title }}</h1>
+    <p style="font-size:0.85rem; color:var(--slate-light);">{{ date | readableDate }} · {{ read_time }} · by TechFun Universe Team</p>
+
+    <div style="margin-top: var(--space-4); font-size:1.05rem; color: var(--ink);">
+      {{ content | safe }}
+    </div>
+
+    <div class="cta-band" style="margin-top: var(--space-6);">
+      <h2>Thinking about your next project?</h2>
+      <p>Tell us what you're trying to solve — we'll help you figure out the right approach.</p>
+      <div class="cta-actions">
+        <a href="/contact/" class="btn btn-primary">Get a Free Consultation</a>
+      </div>
+    </div>
+  </div>
+</section>
