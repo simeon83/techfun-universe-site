@@ -1,35 +1,75 @@
-website_packages:
-  - name: "Starter"
-    tagline: "Perfect for small businesses getting started online"
-    price: "$100"
-    featured: false
-    features:
-      - "5-page business website"
-      - "Mobile responsive"
-      - "Contact form"
-      - "Basic SEO setup"
-      - "1 month support"
-  - name: "Professional"
-    tagline: "For growing businesses that need more power and flexibility"
-    price: "$250"
-    featured: true
-    features:
-      - "Up to 15 pages"
-      - "Custom design"
-      - "CMS integration"
-      - "Advanced SEO"
-      - "E-commerce ready"
-      - "3 months support"
-      - "Analytics dashboard"
-  - name: "Enterprise"
-    tagline: "Full-scale builds for larger organizations"
-    price: "$500"
-    featured: false
-    features:
-      - "Up to 15 pages"
-      - "Custom design"
-      - "CMS integration"
-      - "Advanced SEO"
-      - "E-commerce ready"
-      - "3 months support"
-      - "Analytics dashboard"
+---
+layout: base.njk
+title: "Pricing"
+description: "Transparent pricing for websites, e-commerce, mobile apps, custom software, and AI solutions from TechFun Universe."
+---
+<style>
+.price-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-m); padding: var(--space-4); display:flex; flex-direction:column; position:relative; }
+.price-card.featured { border-color: var(--orange); box-shadow: var(--shadow-md); }
+.price-tag { font-family: var(--font-display); font-size: 2rem; font-weight:700; color: var(--navy-deep); margin: var(--space-2) 0; }
+.price-tag span { font-family: var(--font-body); font-size: 0.9rem; font-weight: 400; color: var(--slate-light); }
+.price-list { list-style:none; padding:0; margin: var(--space-2) 0 var(--space-3); display:flex; flex-direction:column; gap:0.6rem; font-size:0.9rem; color: var(--slate); flex-grow:1; }
+.price-list li::before { content: "✓ "; color: var(--orange); font-weight:700; }
+</style>
+
+<section class="hero" style="padding-bottom: var(--space-5);">
+  <svg class="hero-arc" viewBox="0 0 400 400" fill="none">
+    <path d="M120 20 C 260 40, 380 140, 360 260 C 345 350, 250 380, 170 360" stroke="#FF7A00" stroke-width="3" stroke-linecap="round" opacity="0.85"/>
+    <circle cx="170" cy="360" r="7" fill="#FF7A00"/>
+  </svg>
+  <div class="container hero-inner">
+    <span class="eyebrow">Pricing</span>
+    <h1 style="color:#fff;">Clear packages, no surprises</h1>
+    <p class="lead">Fixed pricing for common projects. Anything custom gets a free, no-obligation quote.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Websites</span>
+      <h2>Website Packages</h2>
+    </div>
+    <div class="grid grid-3 reveal-group">
+      {% for pkg in pricing.website_packages %}
+      <div class="price-card reveal-item {% if pkg.featured %}featured{% endif %}">
+        {% if pkg.featured %}<span class="badge">Most Popular</span>{% endif %}
+        <h3>{{ pkg.name }}</h3>
+        <p style="font-size:0.88rem;">{{ pkg.tagline }}</p>
+        <div class="price-tag">{{ pkg.price }}<span> one-time</span></div>
+        <ul class="price-list">
+          {% for feature in pkg.features %}<li>{{ feature }}</li>{% endfor %}
+        </ul>
+        <a href="/contact/" class="btn {% if pkg.featured %}btn-primary{% else %}btn-outline-navy{% endif %}">Get Started</a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Beyond Websites</span>
+      <h2>Mobile Apps, Software &amp; AI</h2>
+      <p>Every mobile app, custom software system, and AI solution is scoped individually based on complexity, integrations, and timeline.</p>
+    </div>
+    <div class="grid grid-3 reveal-group">
+      <div class="card reveal-item"><h3>Mobile Apps</h3><p>Starting from $2,000 depending on platform and features.</p><a href="/contact/" class="card-link">Get a Free Quote →</a></div>
+      <div class="card reveal-item"><h3>Custom Software</h3><p>Starting from $2,500, or from $600/month for our flagship products.</p><a href="/contact/" class="card-link">Get a Free Quote →</a></div>
+      <div class="card reveal-item"><h3>AI Solutions</h3><p>Starting from $500 for a business chatbot, scaling with complexity.</p><a href="/contact/" class="card-link">Get a Free Quote →</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="cta-band reveal">
+      <h2>Need something custom?</h2>
+      <p>Tell us your budget and goals — we'll put together a scope that fits both.</p>
+      <div class="cta-actions">
+        <a href="/contact/" class="btn btn-primary">Get a Free Quote</a>
+      </div>
+    </div>
+  </div>
+</section>
