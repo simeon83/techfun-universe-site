@@ -1,0 +1,39 @@
+<div class="modal-overlay" id="quickQuoteModal" aria-hidden="true">
+  <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="quickQuoteTitle">
+    <button type="button" class="modal-close" data-modal-close aria-label="Close quick quote form">✕</button>
+    <span class="eyebrow">Quick Quote</span>
+    <h3 id="quickQuoteTitle">Tell us the basics — we'll take it from there</h3>
+    <p style="color:var(--slate); font-size:0.9rem; margin-bottom:var(--space-3);">Prefer to share more detail? <a href="/contact/" style="color:var(--orange); font-weight:600;">Use the full contact form →</a></p>
+    <form name="quick-quote" method="POST" action="https://formspree.io/f/mkjwogzo">
+      <input type="hidden" name="_subject" value="New Quick Quote Request — TechFun Universe">
+      <input type="hidden" name="_next" value="https://techfununiverse.com/thank-you/">
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+      <div class="form-group">
+        <label for="qq-name">Full Name</label>
+        <input type="text" id="qq-name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="qq-contact">Email or Phone</label>
+        <input type="text" id="qq-contact" name="contact_info" required>
+      </div>
+      <div class="form-group">
+        <label for="qq-service">Service</label>
+        <select id="qq-service" name="service">
+          <option>Website Design &amp; Development</option>
+          <option>Mobile App Development</option>
+          <option>Custom Software Development</option>
+          <option>AI Solutions</option>
+          <option>Digital Marketing</option>
+          <option>Branding &amp; Graphics</option>
+          <option>Not sure yet</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="qq-brief">What do you need? (a line or two)</label>
+        <textarea id="qq-brief" name="brief" rows="3" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary" style="width:100%;">Request My Quote</button>
+      <div class="form-feedback" id="quickQuoteFeedback"></div>
+    </form>
+  </div>
+</div>

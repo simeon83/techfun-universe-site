@@ -31,9 +31,10 @@ description: "Get in touch with TechFun Universe for a free consultation on your
   <div class="container grid grid-2" style="gap: var(--space-6); align-items:flex-start;">
     <div class="card reveal-item" style="padding: var(--space-4);">
       <h3>Send us a message</h3>
-      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data" action="/thank-you/" id="contactForm">
-        <input type="hidden" name="form-name" value="contact">
-        <p style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
+      <form name="contact" method="POST" enctype="multipart/form-data" action="https://formspree.io/f/mkjwogzo" id="contactForm">
+        <input type="hidden" name="_subject" value="New Contact Form Submission — TechFun Universe">
+        <input type="hidden" name="_next" value="https://techfununiverse.com/thank-you/">
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
         <div class="form-group">
           <label for="name">Full Name</label>
           <input type="text" id="name" name="name" required>
@@ -65,9 +66,10 @@ description: "Get in touch with TechFun Universe for a free consultation on your
         <div class="form-group">
           <label for="project_files">Attach project files (optional)</label>
           <input type="file" id="project_files" name="project_files" multiple>
-          <p style="font-size:0.78rem; color:var(--slate-light); margin-top:0.3rem;">Briefs, mockups, logos, documents — up to a few files. We'll be able to download them from your submission.</p>
+          <p style="font-size:0.78rem; color:var(--slate-light); margin-top:0.3rem;">Briefs, mockups, logos, documents — up to a few files. Note: file attachments require a paid Formspree plan to be stored; on the free plan they may not come through.</p>
         </div>
         <button type="submit" class="btn btn-primary" style="width:100%;">Request a Free Consultation</button>
+        <div class="form-feedback" id="contactFormFeedback"></div>
       </form>
     </div>
 
