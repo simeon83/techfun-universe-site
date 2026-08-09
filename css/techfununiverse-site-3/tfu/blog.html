@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog | TechFun Universe</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-mark">TFU</span>Tech<span>Fun</span></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="blog.html" class="active">Blog</a>
+      <a href="careers.html">Careers</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="nav-right">
+      <a href="login.html" style="color:var(--text-dim);font-size:0.92rem;">Login</a>
+      <a href="contact.html" class="btn btn-primary btn-sm">Start Project ↗</a>
+      <button class="nav-toggle" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</nav>
+
+<header class="section">
+  <div class="section-glow"></div>
+  <div class="container">
+    <div class="eyebrow">// Blog</div>
+    <h1 style="font-size:clamp(2rem,4vw,2.8rem);margin-bottom:14px;">Insights &amp; <span style="color:var(--orange)">Intelligence</span></h1>
+    <p style="color:var(--text-dim);max-width:560px;font-size:1.02rem;">Thoughts, tutorials, and analysis on AI, web development, digital marketing, and business technology.</p>
+  </div>
+</header>
+
+<section class="section tight">
+  <div class="container">
+
+    <article class="blog-feature" data-search-item data-category="ai">
+      <div class="blog-feature-media"></div>
+      <div class="blog-feature-body">
+        <span class="blog-tag">Artificial Intelligence · 5 min</span>
+        <h2 style="font-size:1.5rem;margin-bottom:14px;">How AI is Transforming African Businesses</h2>
+        <p style="color:var(--text-dim);">Explore how artificial intelligence is reshaping industries across Africa, from agriculture to fintech, and how your business can leverage AI today.</p>
+        <div class="blog-meta">
+          <span>By TechFun Team · 2026-06-15</span>
+          <a href="#" style="color:var(--orange);font-weight:600;">Read Article ↗</a>
+        </div>
+      </div>
+    </article>
+
+    <div class="filter-row" data-filter-group="[data-category]" style="margin-bottom:24px;">
+      <input type="text" class="search-box" id="blogSearch" placeholder="Search articles...">
+      <button class="filter-pill active" data-filter="all">All</button>
+      <button class="filter-pill" data-filter="ai">Artificial Intelligence</button>
+      <button class="filter-pill" data-filter="web">Web Development</button>
+      <button class="filter-pill" data-filter="marketing">Digital Marketing</button>
+      <button class="filter-pill" data-filter="business">Business Technology</button>
+      <button class="filter-pill" data-filter="software">Software Tutorials</button>
+    </div>
+
+    <div class="blog-grid">
+      <div class="blog-card" data-category="web" data-search-item>
+        <div class="blog-card-media"></div>
+        <div class="blog-card-body">
+          <span class="blog-tag">Web Development · 4 min</span>
+          <h3>5 Signs Your Business Website Needs a Rebuild</h3>
+          <p>Slow load times, no mobile view, and outdated contact forms cost you customers every day. Here's how to spot it.</p>
+        </div>
+      </div>
+      <div class="blog-card" data-category="marketing" data-search-item>
+        <div class="blog-card-media"></div>
+        <div class="blog-card-body">
+          <span class="blog-tag">Digital Marketing · 6 min</span>
+          <h3>Getting Found on Google as a Local Business in Liberia</h3>
+          <p>A practical guide to Google Business optimization for SMEs serving Monrovia and beyond.</p>
+        </div>
+      </div>
+      <div class="blog-card" data-category="business" data-search-item>
+        <div class="blog-card-media"></div>
+        <div class="blog-card-body">
+          <span class="blog-tag">Business Technology · 5 min</span>
+          <h3>Why Schools Are Moving to Digital Management Systems</h3>
+          <p>Admissions, grading, and attendance — what changes when it all lives in one platform.</p>
+        </div>
+      </div>
+      <div class="blog-card" data-category="software" data-search-item>
+        <div class="blog-card-media"></div>
+        <div class="blog-card-body">
+          <span class="blog-tag">Software Tutorials · 7 min</span>
+          <h3>Choosing Between a Website and a Custom Web App</h3>
+          <p>Not every project needs custom software. Here's how to tell which one you actually need.</p>
+        </div>
+      </div>
+      <div class="blog-card" data-category="ai" data-search-item>
+        <div class="blog-card-media"></div>
+        <div class="blog-card-body">
+          <span class="blog-tag">Artificial Intelligence · 4 min</span>
+          <h3>What an AI Business Assistant Can (and Can't) Do</h3>
+          <p>Setting realistic expectations before you automate customer support.</p>
+        </div>
+      </div>
+      <div class="blog-card" data-category="web" data-search-item>
+        <div class="blog-card-media"></div>
+        <div class="blog-card-body">
+          <span class="blog-tag">Web Development · 3 min</span>
+          <h3>E-commerce Basics for First-Time Sellers</h3>
+          <p>Payment methods, delivery zones, and inventory — the essentials before you launch.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-launch">
+  <div class="container">
+    <div class="eyebrow">Ready to Launch?</div>
+    <h2>READY TO<br>LAUNCH?</h2>
+    <a href="contact.html" class="btn btn-primary">Start Your Project ↗</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <a href="index.html" class="logo"><span class="logo-mark">TFU</span>Tech<span>Fun</span></a>
+        <p>Digital Agency &amp; Technology Solutions. Serving African businesses and entrepreneurs with world-class digital experiences.</p>
+      </div>
+      <div>
+        <h4>Sitemap</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="login.html">Client Portal</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul class="footer-contact">
+          <li>✉ matthewsweeks666@gmail.com</li>
+          <li>📞 +231 880 880 376 / 775 478 253</li>
+          <li>📍 Chocolate City, New Junction, Gardnersville Township, Monrovia, Liberia</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Follow Us</h4>
+        <div class="social-row">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Twitter">𝕏</a>
+          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="Instagram">◎</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 TechFun Universe. All rights reserved.</span>
+      <span>Transforming Ideas into Digital Experience</span>
+    </div>
+  </div>
+</footer>
+
+<a class="whatsapp-fab btn btn-primary btn-sm" href="https://wa.me/231880880376?text=Hello%20TechFun%20Universe%2C%20I'm%20interested%20in%20your%20digital%20services." target="_blank" rel="noopener">WhatsApp</a>
+<button class="chat-launcher" id="chatLauncher" aria-label="Open chat">💬</button>
+<div class="chat-window" id="chatWindow">
+  <div class="chat-head">
+    <div class="who"><div class="avatar">TFU</div><div><strong>TechFun AI Assistant</strong><span class="status">● Online</span></div></div>
+    <button id="chatClose" aria-label="Close chat">✕</button>
+  </div>
+  <div class="chat-body" id="chatBody">
+    <div class="chat-msg">👋 Hi! I'm the TechFun Universe AI assistant. What would you like to know?</div>
+  </div>
+  <div class="chat-suggested">
+    <span>✨ Suggested questions</span>
+    <button>What services do you offer?</button>
+    <button>How much does a website cost?</button>
+    <button>Do you build school management systems?</button>
+  </div>
+  <div class="chat-input-row">
+    <input type="text" id="chatInput" placeholder="Ask me anything...">
+    <button id="chatSend" aria-label="Send">➤</button>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

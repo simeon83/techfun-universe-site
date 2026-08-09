@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | TechFun Universe</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-mark">TFU</span>Tech<span>Fun</span></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="blog.html">Blog</a>
+      <a href="careers.html">Careers</a>
+      <a href="contact.html" class="active">Contact</a>
+    </div>
+    <div class="nav-right">
+      <a href="login.html" style="color:var(--text-dim);font-size:0.92rem;">Login</a>
+      <a href="contact.html" class="btn btn-primary btn-sm">Start Project ↗</a>
+      <button class="nav-toggle" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</nav>
+
+<header class="section">
+  <div class="section-glow"></div>
+  <div class="container">
+    <div class="eyebrow">// Contact</div>
+    <h1 style="font-size:clamp(2rem,4vw,2.8rem);margin-bottom:14px;">Let's Build <span style="color:var(--orange)">Together</span></h1>
+    <p style="color:var(--text-dim);max-width:560px;font-size:1.02rem;">Tell us about your project. We'll get back to you within 24 hours with a tailored proposal.</p>
+  </div>
+</header>
+
+<section class="section tight">
+  <div class="container">
+    <div class="contact-layout">
+      <form class="contact-card" id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact">
+        <p style="position:absolute;left:-9999px;" aria-hidden="true">
+          <label>Don't fill this out if you're human: <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+        </p>
+        <div class="form-grid">
+          <div class="field">
+            <label for="fullName">Full Name *</label>
+            <input type="text" id="fullName" name="name" placeholder="John Doe" required>
+          </div>
+          <div class="field">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" placeholder="john@example.com" required>
+          </div>
+          <div class="field">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="+231 880 880 376">
+          </div>
+          <div class="field">
+            <label for="serviceRequired">Service Required</label>
+            <select id="serviceRequired" name="service">
+              <option>Select a service</option>
+              <option>Website Development</option>
+              <option>Mobile App Development</option>
+              <option>Custom Software Development</option>
+              <option>AI Solutions</option>
+              <option>Digital Marketing</option>
+              <option>Branding &amp; Graphics</option>
+            </select>
+          </div>
+          <div class="field full">
+            <label for="description">Project Description *</label>
+            <textarea id="description" name="message" placeholder="Tell us about your project, goals, and timeline..." required></textarea>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary" style="margin-top:24px;">Send Message ➤</button>
+      </form>
+
+      <div class="side-card">
+        <div class="icon-badge">💬</div>
+        <h3>WhatsApp Us</h3>
+        <p>Quick chat? Message us directly on WhatsApp for fast replies during business hours.</p>
+        <a href="https://wa.me/231880880376?text=Hello%20TechFun%20Universe%2C%20I'm%20interested%20in%20your%20digital%20services.%20I%20would%20like%20to%20discuss%20my%20project%20and%20request%20a%20quotation.%20Thank%20you." target="_blank" rel="noopener" class="btn btn-outline btn-block">Chat on WhatsApp</a>
+
+        <div style="border-top:1px solid var(--border);margin:8px 0;"></div>
+        <h3>Visit Us</h3>
+        <p>Chocolate City, New Junction, Gardnersville Township, Monrovia, Liberia</p>
+        <p style="margin-top:-8px;">✉ matthewsweeks666@gmail.com<br>📞 +231 880 880 376 / 775 478 253</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-launch">
+  <div class="container">
+    <div class="eyebrow">Ready to Launch?</div>
+    <h2>READY TO<br>LAUNCH?</h2>
+    <a href="#contactForm" class="btn btn-primary">Start Your Project ↗</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <a href="index.html" class="logo"><span class="logo-mark">TFU</span>Tech<span>Fun</span></a>
+        <p>Digital Agency &amp; Technology Solutions. Serving African businesses and entrepreneurs with world-class digital experiences.</p>
+      </div>
+      <div>
+        <h4>Sitemap</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="login.html">Client Portal</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul class="footer-contact">
+          <li>✉ matthewsweeks666@gmail.com</li>
+          <li>📞 +231 880 880 376 / 775 478 253</li>
+          <li>📍 Chocolate City, New Junction, Gardnersville Township, Monrovia, Liberia</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Follow Us</h4>
+        <div class="social-row">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Twitter">𝕏</a>
+          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="Instagram">◎</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 TechFun Universe. All rights reserved.</span>
+      <span>Transforming Ideas into Digital Experience</span>
+    </div>
+  </div>
+</footer>
+
+<a class="whatsapp-fab btn btn-primary btn-sm" href="https://wa.me/231880880376?text=Hello%20TechFun%20Universe%2C%20I'm%20interested%20in%20your%20digital%20services." target="_blank" rel="noopener">WhatsApp</a>
+<button class="chat-launcher" id="chatLauncher" aria-label="Open chat">💬</button>
+<div class="chat-window" id="chatWindow">
+  <div class="chat-head">
+    <div class="who"><div class="avatar">TFU</div><div><strong>TechFun AI Assistant</strong><span class="status">● Online</span></div></div>
+    <button id="chatClose" aria-label="Close chat">✕</button>
+  </div>
+  <div class="chat-body" id="chatBody">
+    <div class="chat-msg">👋 Hi! I'm the TechFun Universe AI assistant. What would you like to know?</div>
+  </div>
+  <div class="chat-suggested">
+    <span>✨ Suggested questions</span>
+    <button>What services do you offer?</button>
+    <button>How much does a website cost?</button>
+    <button>Do you build school management systems?</button>
+  </div>
+  <div class="chat-input-row">
+    <input type="text" id="chatInput" placeholder="Ask me anything...">
+    <button id="chatSend" aria-label="Send">➤</button>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+<script>
+  // Pre-fill service field if arriving from the services page inquiry builder
+  const params = new URLSearchParams(window.location.search);
+  const services = params.get('services');
+  if (services) {
+    const desc = document.getElementById('description');
+    desc.value = `I'm interested in: ${services}.\n\n`;
+    desc.focus();
+  }
+</script>
+</body>
+</html>
