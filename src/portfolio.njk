@@ -39,8 +39,8 @@ description: "Explore TechFun Universe's portfolio of websites, mobile apps, cus
         <h3>{{ item.data.title }}</h3>
         <p>{{ item.data.description }}</p>
         {% if item.data.technologies %}<p style="font-size:0.82rem; color:var(--slate-light);">{{ item.data.technologies }}</p>{% endif %}
-        {% if item.data.results %}<p style="font-size:0.82rem; color:var(--orange);">{{ item.data.results }}</p>{% endif %}
-        <a href="/contact/" class="card-link">See similar results →</a>
+        {% if item.data.status %}<p style="font-size:0.78rem; color:var(--orange); font-weight:600; text-transform:uppercase; letter-spacing:0.04em;">{{ item.data.status }}</p>{% endif %}
+        <a href="/contact/" class="card-link">Discuss a similar project →</a>
       </div>
       {% endfor %}
     </div>
@@ -50,7 +50,7 @@ description: "Explore TechFun Universe's portfolio of websites, mobile apps, cus
 <section class="section section-alt">
   <div class="container">
     <div class="cta-band reveal">
-      <h2>Want results like these?</h2>
+      <h2>Want something like this built for you?</h2>
       <p>Tell us about your project and we'll show you exactly how we'd approach it.</p>
       <div class="cta-actions">
         <a href="/contact/" class="btn btn-primary">Start Your Project</a>

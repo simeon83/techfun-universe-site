@@ -2,6 +2,6 @@
 title: "BuildRight Workforce Manager"
 category: "software"
 technologies: "React, Node.js, MongoDB"
-description: "Construction crew scheduling and site cost tracking for a regional contractor."
-results: "Reduced payroll errors by 90%."
+description: "A construction crew scheduling and site cost tracking system, demonstrating how TechFun Universe approaches workforce management for contractors."
+status: "Demo Project"
 ---

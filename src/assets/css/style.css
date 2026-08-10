@@ -224,7 +224,7 @@ img { max-width: 100%; display: block; }
   .nav-links.open { transform: translateY(0); }
   .nav-links a { width: 100%; padding: 0.6rem 0; border-bottom: 1px solid var(--border); white-space: normal; }
   .nav-toggle { display: block; z-index: 210; position: relative; }
-  .nav-cta .btn-outline-navy { display: none; }
+  .nav-cta .btn-primary { display: none; }
 
   .nav-dropdown { width: 100%; }
   .nav-dropdown-trigger {

@@ -49,6 +49,20 @@ collections:
       - { label: "Description", name: "description", widget: "text" }
       - { label: "Technologies Used", name: "technologies", widget: "string" }
       - { label: "Client Results", name: "results", widget: "text", required: false }
+      - label: "Project Status"
+        name: "status"
+        widget: "select"
+        required: false
+        hint: "Be truthful — only use client-verified results for real, completed client work."
+        options:
+          - { label: "Demo Project", value: "Demo Project" }
+          - { label: "Internal Product", value: "Internal Product" }
+          - { label: "Concept Project", value: "Concept Project" }
+          - { label: "Prototype", value: "Prototype" }
+          - { label: "In Development", value: "In Development" }
+          - { label: "Built by TechFun Universe", value: "Built by TechFun Universe" }
+          - { label: "Available for Customization", value: "Available for Customization" }
+          - { label: "Completed Client Project", value: "Completed Client Project" }
 
   - name: "testimonials"
     label: "Testimonials"

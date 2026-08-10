@@ -2,6 +2,6 @@
 title: "Monrovia Realty Group"
 category: "website"
 technologies: "HTML/CSS/JS, Decap CMS"
-description: "Property listings site with inquiry forms and agent profiles."
-results: "Tripled monthly listing inquiries."
+description: "A property listings site concept with inquiry forms and agent profiles, showing our approach to real estate websites."
+status: "Demo Project"
 ---

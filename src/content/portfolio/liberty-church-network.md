@@ -2,6 +2,6 @@
 title: "Liberty Church Network"
 category: "website"
 technologies: "HTML/CSS, Decap CMS, Stripe"
-description: "Multi-campus church website with sermon archive and online giving."
-results: "Online giving adoption grew 40% in the first three months."
+description: "A multi-campus church website concept with sermon archive and online giving, built to demonstrate this kind of platform."
+status: "Demo Project"
 ---

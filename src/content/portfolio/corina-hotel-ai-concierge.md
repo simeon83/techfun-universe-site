@@ -2,6 +2,6 @@
 title: "Corina Hotel AI Concierge"
 category: "ai"
 technologies: "OpenAI API, WhatsApp Business API"
-description: "WhatsApp-based AI assistant handling booking questions around the clock."
-results: "Handles 60% of guest inquiries without staff involvement."
+description: "A WhatsApp-based AI assistant concept for handling hotel booking questions, showcasing our AI integration capabilities."
+status: "Concept Project"
 ---

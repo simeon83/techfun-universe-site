@@ -2,6 +2,6 @@
 title: "QuickDash Delivery"
 category: "app"
 technologies: "Flutter, Firebase, Google Maps API"
-description: "Cross-platform delivery app connecting Monrovia riders with local shops."
-results: "Reduced average delivery time by 30%."
+description: "A cross-platform delivery app concept connecting riders with local shops, built to demonstrate our mobile app capabilities."
+status: "Prototype"
 ---
