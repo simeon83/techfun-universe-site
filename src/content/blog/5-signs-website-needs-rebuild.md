@@ -3,7 +3,7 @@ title: How Much Does a Business Website Cost in Liberia?
 date: 2026-06-12
 category: Web Development
 read_time: 4 min read
-image: /assets/img/uploads/blog-post.png
+image: /assets/img/uploads/techfun-universe-post.png
 excerpt: "If you run a business in Liberia, you may have asked this question:"
 ---
 You may have seen someone offering a website for a very low price. You may also have received a quotation that costs several hundred dollars—or even much more.
