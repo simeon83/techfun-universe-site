@@ -8,13 +8,13 @@ excerpt: "If you run a business in Liberia, you may have asked this question:"
 ---
 You may have seen someone offering a website for a very low price. You may also have received a quotation that costs several hundred dollars—or even much more.
 
-So, what is the right price?
+**So, what is the right price?**
 
 The truth is that there is no single price for every business website. The cost depends on what you want the website to do, how many pages you need, the design, and whether you need additional features such as online payments, booking, customer accounts, or business software.
 
 In this guide, we’ll break down the main things that affect website costs in Liberia and help you understand what you should look for before paying someone to build your website.
 
-Why Does Your Business Need a Website?
+**Why Does Your Business Need a Website?**
 
 Today, many businesses in Liberia use Facebook, Instagram, WhatsApp, or other social platforms to communicate with customers.
 
@@ -28,7 +28,7 @@ For example, imagine someone hears about your construction company from a friend
 
 Instead of simply telling them, “Check our Facebook page,” you can give them your website.
 
-They can visit the site and immediately see:
+**They can visit the site and immediately see:**
 
 \- What your company does
 
