@@ -11,6 +11,10 @@ module.exports = function (eleventyConfig) {
     return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat("LLLL d, yyyy");
   });
 
+  eleventyConfig.addFilter("isoDate", (dateObj) => {
+    return DateTime.fromJSDate(dateObj, { zone: "utc" }).toISODate();
+  });
+
   eleventyConfig.addCollection("blogPosts", (collectionApi) => {
     return collectionApi.getFilteredByTag("blogpost").sort((a, b) => b.date - a.date);
   });

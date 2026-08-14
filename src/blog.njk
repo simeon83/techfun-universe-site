@@ -20,6 +20,12 @@ description: "Insights on web development, mobile apps, custom software, AI, and
     <div class="grid grid-3 reveal-group">
       {% for post in collections.blogPosts %}
       <a href="{{ post.url }}" class="card reveal-item" style="text-decoration:none;">
+        {% if post.data.image %}
+        <picture>
+          <source srcset="{{ post.data.image | replace('.png', '.webp') | replace('.jpg', '.webp') | replace('.jpeg', '.webp') }}" type="image/webp">
+          <img src="{{ post.data.image }}" alt="{{ post.data.image_alt or post.data.title }}" loading="{{ 'eager' if loop.first else 'lazy' }}" style="width: calc(100% + (2 * var(--space-3))); margin: calc(-1 * var(--space-3)) calc(-1 * var(--space-3)) var(--space-3); display:block; height: 180px; object-fit: cover; border-radius: var(--radius-m) var(--radius-m) 0 0;">
+        </picture>
+        {% endif %}
         <span class="badge">{{ post.data.category }}</span>
         <h3>{{ post.data.title }}</h3>
         <p>{{ post.data.excerpt }}</p>

@@ -1,11 +1,19 @@
 ---
 layout: base.njk
+ogType: article
 ---
 <section class="section" style="padding-top: var(--space-6);">
   <div class="container" style="max-width: 760px;">
     <span class="badge">{{ category }}</span>
     <h1>{{ title }}</h1>
     <p style="font-size:0.85rem; color:var(--slate-light);">{{ date | readableDate }} · {{ read_time }} · by TechFun Universe Team</p>
+
+    {% if image %}
+    <picture>
+      <source srcset="{{ image | replace('.png', '.webp') | replace('.jpg', '.webp') | replace('.jpeg', '.webp') }}" type="image/webp">
+      <img src="{{ image }}" alt="{{ image_alt or title }}" loading="eager" fetchpriority="high" style="width:100%; height:auto; border-radius:12px; margin-top: var(--space-4);">
+    </picture>
+    {% endif %}
 
     <div style="margin-top: var(--space-4); font-size:1.05rem; color: var(--ink);">
       {{ content | safe }}
@@ -20,3 +28,31 @@ layout: base.njk
     </div>
   </div>
 </section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ title | dump | safe }},
+  "description": {{ (description or excerpt) | dump | safe }},
+  "image": {{ (site.url + image if image else site.url + "/assets/img/team/og-image.jpg") | dump | safe }},
+  "datePublished": {{ date | isoDate | dump | safe }},
+  "dateModified": {{ date | isoDate | dump | safe }},
+  "author": {
+    "@type": "Organization",
+    "name": "TechFun Universe"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "TechFun Universe",
+    "logo": {
+      "@type": "ImageObject",
+      "url": {{ (site.url + "/assets/img/logo.png") | dump | safe }}
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": {{ (site.url + page.url) | dump | safe }}
+  }
+}
+</script>

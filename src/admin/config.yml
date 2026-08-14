@@ -26,6 +26,7 @@ collections:
       - { label: "Category", name: "category", widget: "select", options: ["Web Development", "Mobile Apps", "Software", "AI", "Digital Marketing", "Branding", "Case Study"] }
       - { label: "Read Time", name: "read_time", widget: "string", default: "5 min read" }
       - { label: "Featured Image", name: "image", widget: "image", required: false }
+      - { label: "Image Alt Text", name: "image_alt", widget: "string", required: false, hint: "Describe the image for accessibility and SEO. Falls back to the post title if left blank." }
       - { label: "Excerpt", name: "excerpt", widget: "text" }
       - { label: "Body", name: "body", widget: "markdown" }
 
