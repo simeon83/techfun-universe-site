@@ -6,7 +6,9 @@ read_time: 4 min read
 image: /assets/img/uploads/techfun-universe-post.png
 image_alt: Liberian business owner comparing simple, professional, and custom
   website packages on a laptop
-excerpt: How Much Does a Business Website Cost in Liberia?
+excerpt: Wondering how much a business website costs in Liberia? See real price
+  ranges for simple, professional, and custom websites, and what affects the
+  cost.
 ---
 
 
