@@ -4,8 +4,11 @@ date: 2026-06-12
 category: Web Development
 read_time: 4 min read
 image: /assets/img/uploads/techfun-universe-post.png
-image_alt: "Liberian business owner comparing simple, professional, and custom website packages on a laptop"
-excerpt: "If you run a business in Liberia, you may have asked this question:  "
+image_alt: Liberian business owner comparing simple, professional, and custom
+  website packages on a laptop
+excerpt: Wondering how much a business website costs in Liberia? See real price
+  ranges for simple, professional, and custom websites, and what affects the
+  cost.
 ---
 
 
